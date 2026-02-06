@@ -7,10 +7,15 @@ export default (outputFile, overrides = {}) => ({
   input: 'src/index.ts',
   output: [
     {
-      file: outputFile,
+      file: `dist/cjs/${outputFile}.js`,
       format: 'cjs',
       sourcemap: true,
     },
+    {
+      file: `dist/esm/${outputFile}.mjs`,
+      format: 'es',
+      sourcemap: true,
+    }
   ],
   watch: {
     include: 'src/**',

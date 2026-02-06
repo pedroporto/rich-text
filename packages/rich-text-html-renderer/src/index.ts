@@ -9,7 +9,7 @@ import {
   Text,
   helpers,
 } from '@contentful/rich-text-types';
-import escape from 'escape-html';
+import escape from './escapeHtml';
 
 const attributeValue = (value: string) => `"${value.replace(/"/g, '&quot;')}"`;
 
